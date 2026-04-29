@@ -10,8 +10,8 @@
 .food-item-image{
     width: 100%;
     border-radius: 15px 15px 0px 0px;
-    transition: transform 0.3s ease; /* add this line */
 }
+
 .food-item-info{
     padding: 20px;
 }
@@ -46,8 +46,8 @@
 
 .food-item-img-container{
     position: relative;
-    overflow: hidden; /* add this line */
 }
+
 .food-item-img-container .add{
     width: 35px;
     position: absolute;
@@ -71,7 +71,4 @@
 
 .food-item-counter img{
     width: 30px;
-}
-.food-item-img-container:hover .food-item-image{
-    transform: scale(1.1);
 }

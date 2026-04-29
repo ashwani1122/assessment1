@@ -14,28 +14,43 @@
     color: #808080;
 }
 
+/* Scroll container */
 .explore-menu-list{
     display: flex;
+    padding: 10px;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
     text-align: center;
     margin: 20px 0px;
-    overflow: scroll;
+    overflow-x: auto;
 }
 
 .explore-menu-list::-webkit-scrollbar{
     display: none;
 }
 
+/* Item container (important for zoom) */
+.explore-menu-list-item{
+    /* overflow: hidden; */
+    /* border-radius: 50%; */
+}
+
+/* Image */
 .explore-menu-list-item img{
-    width: 7.5vw;
+    width: 7vw;
     min-width: 80px;
     cursor: pointer;
     border-radius: 50%;
-    transition: 0.2s;
+    transition: transform 0.3s ease;
 }
 
+/* 🔥 Zoom effect */
+.explore-menu-list-item:hover img{
+    transform: scale(1.1);
+}
+
+/* Text */
 .explore-menu-list-item p{
     margin-top: 10px;
     color: #747474;
@@ -43,6 +58,13 @@
     cursor: pointer;
 }
 
+/* Active state */
+.explore-menu-list-item .active{
+    border: 4px solid tomato;
+    padding: 2px;
+}
+
+/* Divider */
 .explore-menu hr{
     margin: 10px 0px;
     height: 2px;
@@ -50,11 +72,7 @@
     border: none;
 }
 
-.explore-menu-list-item .active{
-    border: 4px solid tomato;
-    padding: 2px;
-}
-
+/* Responsive */
 @media (max-width:1050px){
     .explore-menu-text{
         max-width: 100%;
